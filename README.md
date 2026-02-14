@@ -49,7 +49,8 @@ curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "[https://lab-management-api.on
 curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "[https://lab-management-api.onrender.com/api/v1/reports?page=2&per_page=5](https://lab-management-api.onrender.com/api/v1/reports?page=2&per_page=5)"
 ```
 **C. Prueba de Resiliencia (Manejo de Errores - 401 Unauthorized):**
-curl -H "Authorization: Bearer TOKEN_FALSO" "[https://lab-management-api.onrender.com/api/v1/reports](https://lab-management-api.onrender.com/api/v1/reports)"
+```bash
+curl -H "Authorization: Bearer TOKEN_FALSO" "[https://lab-management-api.onrender.com/api/v1/reports](https://lab-management-api.onrender.com/api/v1/reports)" 
 ```
 
 ---
@@ -61,14 +62,19 @@ Para ejecutar el proyecto localmente y probar la integridad del sistema con dato
 ### Clonar el repositorio e instalar dependencias:
 ```bash
 git clone <tu-repo-url>
+
 cd lab_management
+
 bundle install
+```
 
 ### Preparar y poblar la base de datos:
 El proyecto incluye un script robusto que genera 5 Profesores, 3 Laboratorios, 15 Computadores, 30 Componentes y 35 Reportes para probar correctamente la paginación y los Webhooks.
 ```bash
 rails db:create db:migrate db:seed
+```
 
 ### Iniciar el servidor local:
 ```bash
 rails server
+```
