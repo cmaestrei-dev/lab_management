@@ -5,7 +5,7 @@ class Report < ApplicationRecord
 
   validates :description, :status, presence: true
 
-  after_create_commit :trigger_webhook
+  after_commit :trigger_webhook, on: [:create, :update]
 
   private
 
