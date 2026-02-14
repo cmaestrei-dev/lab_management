@@ -31,7 +31,7 @@ El ecosistema relacional está compuesto por 5 entidades principales, garantizan
 
 ### 1. Entorno de Producción
 La API se encuentra desplegada y lista para ser consumida.
-* **Base URL:** `https://lab-management-api.onrender.com` *(Nota: Actualizar con tu URL real de Render)*
+* **Base URL:** `https://lab-management-x2k7.onrender.com`
 
 ### 2. Autenticación
 Todas las peticiones deben incluir el header de autorización.
@@ -43,13 +43,14 @@ Todas las peticiones deben incluir el header de autorización.
 Esta petición demuestra el uso de Eager Loading, trayendo la data anidada de computadores y laboratorios sin saturar la base de datos.
 ```bash
 curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "[https://lab-management-api.onrender.com/api/v1/reports](https://lab-management-api.onrender.com/api/v1/reports)"
-
+```
 **B. Navegación por Paginación (@nextLink):**
 ```bash
 curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "[https://lab-management-api.onrender.com/api/v1/reports?page=2&per_page=5](https://lab-management-api.onrender.com/api/v1/reports?page=2&per_page=5)"
-
+```
 **C. Prueba de Resiliencia (Manejo de Errores - 401 Unauthorized):**
 curl -H "Authorization: Bearer TOKEN_FALSO" "[https://lab-management-api.onrender.com/api/v1/reports](https://lab-management-api.onrender.com/api/v1/reports)"
+```
 
 ---
 
