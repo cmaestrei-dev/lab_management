@@ -42,15 +42,15 @@ Todas las peticiones deben incluir el header de autorización.
 **A. Obtener la primera página de reportes (Límite dinámico):**
 Esta petición demuestra el uso de Eager Loading, trayendo la data anidada de computadores y laboratorios sin saturar la base de datos.
 ```bash
-curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "[https://lab-management-api.onrender.com/api/v1/reports](https://lab-management-api.onrender.com/api/v1/reports)"
+curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "https://lab-management-x2k7.onrender.com/api/v1/reports"
 ```
 **B. Navegación por Paginación (@nextLink):**
 ```bash
-curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "[https://lab-management-api.onrender.com/api/v1/reports?page=2&per_page=5](https://lab-management-api.onrender.com/api/v1/reports?page=2&per_page=5)"
+curl -H "Authorization: Bearer TU_TOKEN_SECRETO" "https://lab-management-x2k7.onrender.com/api/v1/reports?page=2&per_page=5"
 ```
 **C. Prueba de Resiliencia (Manejo de Errores - 401 Unauthorized):**
 ```bash
-curl -H "Authorization: Bearer TOKEN_FALSO" "[https://lab-management-api.onrender.com/api/v1/reports](https://lab-management-api.onrender.com/api/v1/reports)" 
+curl -H "Authorization: Bearer TOKEN_FALSO" "https://lab-management-x2k7.onrender.com/api/v1/reports"
 ```
 
 ---
@@ -61,7 +61,7 @@ Para ejecutar el proyecto localmente y probar la integridad del sistema con dato
 
 ### Clonar el repositorio e instalar dependencias:
 ```bash
-git clone <tu-repo-url>
+git clone https://github.com/cmaestrei-dev/lab_management.git
 
 cd lab_management
 
