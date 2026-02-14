@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
+  root "home#index"
+  get "home/index"
   resources :reports
   resources :components
   resources :computers
   resources :laboratories
   resources :professors
 
-  root "reports#index"
-  
   namespace :api do
     namespace :v1 do
       resources :reports, only: [:index]
