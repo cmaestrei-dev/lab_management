@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lab_code: MyString
+  name: MyString
+  capacity: 1
+  location: MyString
+
+two:
+  lab_code: MyString
+  name: MyString
+  capacity: 1
+  location: MyString

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_code: MyString
+  description: MyText
+  status: MyString
+  report_date: 2026-02-13 21:53:14
+  professor: one
+  computer: one
+  laboratory: one
+
+two:
+  report_code: MyString
+  description: MyText
+  status: MyString
+  report_date: 2026-02-13 21:53:14
+  professor: two
+  computer: two
+  laboratory: two
