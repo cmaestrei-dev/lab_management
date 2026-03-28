@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    PruebaColaJob.perform_later
     @total_reports_count = Report.count
     @failing_computers_count = Computer.where(status: 'En Mantenimiento').count
     @saturated_labs_count = Laboratory.where('capacity < ?', 30).count
