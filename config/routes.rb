@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   end
 
   get "up" => "rails/health#show", as: :rails_health_check
+  get '/health_check', to: 'application#health_check'
 end
